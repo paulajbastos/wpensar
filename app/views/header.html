@@ -1,0 +1,14 @@
+ <header class="header">
+	<div class="container clearfix">
+		<div class="logo pull-left">
+			<h1>Logomarca</h1>
+		</div>
+		<nav ng-show="rootLogged" class="menu pull-right">
+			<div class="clearfix">
+				<a ng-class="{active: isActive('/produtos') || isActive('/')}" href="./produtos" class="pull-left" >Produtos</a>
+				<a ng-class="{active: isActive('/compras')}" href="./compras" class="pull-left">Compras Efetuadas</a>
+				<a href="./login" class="pull-left">Logout</a>				
+			</div>
+		</nav>
+	</div>
+</header>

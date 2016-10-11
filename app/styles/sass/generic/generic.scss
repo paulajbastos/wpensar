@@ -1,0 +1,86 @@
+﻿/* Intended for the more generic properties and lower specificity possible.
+Resets, box-sizing */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+ 
+body {
+    -webkit-touch-callout: none;
+    /*-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+    padding: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    overflow-x: hidden;
+    height: 100%;
+    /* background: linear-gradient(90deg, $blue_dark 40%, #ffffff 40%) */
+}
+ 
+html,
+body {
+    height: auto;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    height: 100%;
+    min-height: 100%;
+}
+ 
+ 
+html, p, span, h1, h2, h3, h4, h5, h6, li, strong, div, a {
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -moz-osx-font-smoothing: grayscale;
+    //-webkit-font-smoothing: antialiased !important;
+}
+ 
+h1, h2, h3, h4, h5{ margin: 0; padding: 0; font-weight: 400;}
+
+a, p{ margin:0; padding:0;}
+ 
+section, footer{ display:block;}
+
+ul{
+    list-style: none;
+    margin:0; padding:0;
+    li{
+        margin:0; padding:0;
+        a{color: white;}
+    }
+}
+/* Fontawesome*/
+.#{$fa-css-prefix} {
+  display: inline-block;
+  font: normal normal normal #{$fa-font-size-base}/1 FontAwesome; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); // ensures no half-pixel rendering in firefox
+
+}
+.#{$fa-css-prefix}-search:before { content: $fa-var-search; }
+.#{$fa-css-prefix}-linkedin:before { content: $fa-var-linkedin; }
+.#{$fa-css-prefix}-linkedin-square:before { content: $fa-var-linkedin-square; }
+
+.editable-error{ font-size: 10px; color: red;}
+.underline{ text-decoration: underline;}

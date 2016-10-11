@@ -1,0 +1,29 @@
+﻿#divPaginacao{
+	margin-top: 40px;
+	.pagination{ 
+		margin:0px;
+		border-radius: 0;
+		> li > a,
+		> li > span { 
+			border-bottom-right-radius: 0; 
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 0; 
+			border-top-left-radius: 0;
+		}
+		> li > a{
+			margin-left:5px;
+			padding: 2px 12px;
+			background-color: $green_light;
+			color: $font-light;
+			border: none;
+			font-weight: 800;
+			font-size: 24px;
+		}
+
+		> .active > a{
+			background-color: $orange;
+			color: $font-light;
+		}
+		> .prev > a, > .next > a{ color: $font-dark}
+	}
+}

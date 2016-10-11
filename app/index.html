@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<title>{{title}}</title>
+		<base href="/" />
+		<meta name="description" content="{{title}}" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{title}}" />
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body ng-cloak>
+		<div ng-controller="MainController">
+			<ng-include src="'views/header.html'"></ng-include>
+			<div class="page">
+				<ui-view></ui-view>
+			</div>
+			<ng-include src="'views/footer.html'"></ng-include>
+		</div>
+		
+		<script src="scripts/vendors.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/app-services/main-service.js"></script>
+		<script src="scripts/app-services/authentication.service.js"></script>
+		<script src="scripts/app-services/service.js"></script>
+		<script src="scripts/app-controllers/app-controller.js"></script>
+		<script src="scripts/app-controllers/login-controller.js"></script>
+		<script src="scripts/app-controllers/produtosController.js"></script>
+		<script src="scripts/app-controllers/produtoController.js"></script>
+		<script src="scripts/app-controllers/comprasController.js"></script>
+		<script src="scripts/app-directives/app-page-titles.js"></script>
+	    <script src="scripts/app-helpers/fake-backend.js"></script>
+		
+	</body>
+</html>

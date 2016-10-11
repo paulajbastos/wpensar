@@ -1,0 +1,96 @@
+﻿/* mixins */
+=border-radius($radius)
+    border-radius: $radius
+
+=circle($w, $h)
+    width: $w
+    height: $h
+
+    +border-radius(50%)
+
+=transition-default($seconds: 0.3s, $ease: cubic-bezier(0.55, 0, 0.1, 1))
+    transition: all $seconds $ease
+
+=box-shadow($rigth: 0px, $bottom: 2px, $blur: 4px, $spread: 0px, $r: 0, $g: 0, $b: 0, $alpha: 0.15)
+    box-shadow: $rigth $bottom $blur $spread rgba($r, $g, $b, $alpha)
+
+=calc-width($op, $x, $y)
+    width: -webkit-calc(#{$x} #{$op}  #{$y})
+    width: -moz-calc(#{$x} #{$op}  #{$y})
+    width: calc(#{$x} #{$op}  #{$y})
+
+
+=calc-height($op, $x, $y, $important: 0)
+    @if $important == 1 
+        height: -webkit-calc(#{$x} #{$op}  #{$y})!important
+        height: -moz-calc(#{$x} #{$op}  #{$y})!important
+        height: calc(#{$x} #{$op}  #{$y})!important
+    @else
+        height: -webkit-calc(#{$x} #{$op}  #{$y})
+        height: -moz-calc(#{$x} #{$op}  #{$y})
+        height: calc(#{$x} #{$op}  #{$y})
+
+=transition-fade($opacity, $seconds)
+    @if $opacity == 1
+        zoom: 1
+        filter: alpha(opacity = 100)
+    @else
+        filter: alpha(opacity = $opacity)
+
+    opacity: $opacity
+
+    ////filter: alpha(opacity=$ieopacity)
+
+    transition: opacity $seconds linear
+
+=text-ellipsis-multine($width, $height, $clamp)
+    max-width: $width
+    height: $height
+    overflow: hidden
+    text-overflow: ellipsis
+
+=text-ellipsis($width)
+    white-space: nowrap
+    max-width: $width
+    overflow: hidden
+    text-overflow: ellipsis
+
+=remove-text-ellipsis($width)
+    white-space: normal
+    width: $width
+    overflow: visible
+    text-overflow: clip
+
+=absolute-center($mode: all)
+    position: absolute
+
+    @if $mode == "all"
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+    @if $mode == "vertical"
+        top: 50%
+        transform: translate(0, -50%)
+
+    @if $mode == "horizontal"
+        left: 50%
+        transform: translate(-50%, 0)
+
+=loader($spinner_size: 50px, $color: #ffffff) 
+    font-size: $spinner_size
+    color: $color
+
+    @keyframes rotation
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
+
+    animation: rotation 1s linear infinite
+
+=clearfix() 
+    &:after
+        content: ""
+        display: table
+        clear: both

@@ -1,0 +1,61 @@
+﻿/* Basic configurations */
+
+/*
+// Variables
+// -------------------------------------------------- 
+*/
+
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// -------------------------------------------------- 
+	
+
+//Font Paths do Movia
+$fonts_path               : "fonts/";
+
+// Import BS core
+$icon-font-path           : $fonts_path !default;
+
+/* Font Paths - Font Awesome */
+$fa-font-path:        $fonts_path  !default;
+$fa-css-prefix:       fa !default;
+$fa-var-search: "\f002";
+$fa-var-linkedin: "\f0e1";
+$fa-var-linkedin-square: "\f08c";
+
+
+/* Layout */
+$containerW: 1200px;
+$containerPad: 10px;
+$padd_bottom_contents: 90px;
+$col-bt-w: 71px;
+
+/* Colors */
+	
+$blue_dark: #1e8cd6;
+$blue_default: #3a48a9;
+$gray_default: #f2f2f2;
+$gray_light: #efefe2;
+$gray_text: #888888;
+$gray1: #56565c;
+$green: #63ae5d;
+$green_light: #bdcaae;
+$red: #a94442;
+
+$blue_light: #1d9495;
+$blue_lighter: #37a0e6;
+$border_bottom: #100932;
+
+$color-head-deslogado: $blue_default;
+$color-head-dashboard: $gray_default;
+
+$brand-color: white;
+
+
+/* Buttons */
+$btn-padding: 20px;
+
+/* Fonts */
+$font-dark: black;
+$font-light: white;

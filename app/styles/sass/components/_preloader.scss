@@ -1,0 +1,66 @@
+﻿/* MAIN LOADER */
+
+.componentloading {
+    background: #2AB4C0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+ }
+
+.loading {
+    background: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 11000;
+    opacity: 0.8;
+
+    //$preloaderColor:#333, $preloaderW:40px, $preloaderH:40px
+    @include main-preoloader(#FFFFFF, 40px, 40px);
+
+    .wrap-loader {
+        position: absolute;
+        z-index: 11100;
+        left: 50%;
+        top: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+       /*  z-index: 1030;
+        text-align: center; */
+    }
+
+    /* Variations */
+    &.-absolute{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    &.-fixed{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
+    &.-white{
+        @include main-preoloader(white, 40px, 40px);
+    }
+    &.-blue{
+        @include main-preoloader($blue_light, 40px, 40px);
+    }
+}
+.page-item-loading{
+    position: relative;
+    width: 100%;
+    height: 40px;
+        
+    @include main-preoloader($blue_lighter, 40px, 40px);
+
+    .wrap-loader {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        top: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+}

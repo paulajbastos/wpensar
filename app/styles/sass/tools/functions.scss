@@ -1,0 +1,17 @@
+﻿/*
+-text-contrast
+recebe uma cor, aplica uma formula e retorna cor escura ou clara dependendo do fundo
+backgrounds claros retornam cores escuras e vice-versa com a intenção de melhorar a leitura
+cor escura e clara podem ser setadas através dos parâmetros result-dark e result-light
+*/
+@function -text-contrast($base-color, $result-dark:#000, $result-light:#fff) {
+  $red:red($base-color);
+  $green:green($base-color);
+  $blue:blue($base-color);
+  
+  @if ($red * 0.299) + ($green * 0.587) + ($blue * 0.114) > 186 {
+    @return $result-dark
+  } @else {
+    @return $result-light
+  }
+}

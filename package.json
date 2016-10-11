@@ -1,0 +1,38 @@
+{
+  "name": "querotrabalharnawpensar",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "git@bitbucket.org:paulajbastos/querotrabalharnawpensar.git",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-ui-router": "^0.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "grunt": "~0.4.5",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-image-sprite": "^0.1.1",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sprite-glue": "^0.2.0",
+    "grunt-spritesmith": "^6.3.1",
+    "webpack": "^1.13.2"
+  }
+}
